@@ -10,15 +10,15 @@ module.exports.ls = () => {
 };
 
 module.exports.touch = (file) => {
-    fs.writeFile('{file}', 'Hello ${file}', 'utf8', err => {
+    fs.writeFile(file, 'Hello file', 'utf8', err => {
         if (err) throw err;
-        console.log('created ${file} successfully');
+        console.log('created file successfully');
       });
     };
 
 module.exports.mkdir = (directory) => {
-    fs.mkdirSync(${directory}, err=>{
+    fs.mkdirSync(directory, err=>{
         if (err) throw err;
-        console.log('directory named ${directory} created');
+        console.log('directory created');
     });
 };
